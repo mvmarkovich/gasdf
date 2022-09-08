@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20Gramm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- mobile header -->
+    <header class="header__mobile">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <img src="/images/logo.svg" alt="logo" class="logo-img">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <button class="menu__button menu__button-search"><span><img src="/images/lens.svg" alt=""
+								class="menu__search-img"></span></button>
+                    <button class="menu__button menu__button-nav"><span><img src="/images/navicon.svg" alt=""
+								class="menu__nav-icon"></span></button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- desktop header -->
+    <header class="header__desktop">
+        <div class="container-desktop">
+            <div class="header__top">
+                <div class="logo">
+                    <a href="#" class="logo-link"><img src="/images/logo.svg" alt="" class="header-logo"></a>
+                </div>
+                <div class="header__links">
+                    <ul class="header__links-list">
+                        <li class="header__links-item"><a href="#" class="header__links-link">Статьи и новости</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Магазины</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Оплата и доставка</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Скидки и акции</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__phonenumber">
+                    <a href="tel" class="header__phonenumber-link">8(499)110-21-75</a>
+                </div>
+            </div>
+            <div class="header__middle">
+                <div class="header__catalog">
+                    <button onclick="dropdownToggle()" class="header__catalog-btn">
+						<p>Каталог</p><span><img src="/images/navicon.svg" alt="Каталог" class="menu_nav"></span>
+					</button>
+                    <div id="header__catalog-dropdown" class="header__catalog-dropdown-container">
+                        <div class="header__catalog-dropdown-sections">
+                            <ul class="header__catalog-dropdown-list">
+                                <li class="header__catalog-dropdown-item header__catalog-dropdown-item-lg">
+                                    <img src="/images/dropdown-icons/1.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link ">Одноразовые электронные испарители&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/2.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Pod-системы&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/3.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Жидкости&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/4.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Кальяны&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/5.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Табаки&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/6.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Уголь&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/7.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Снюс&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item header__catalog-dropdown-item-lg">
+                                    <img src="/images/dropdown-icons/8.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Бонги и&nbsp;аксессуары<br>к&nbsp;ним&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item header__catalog-dropdown-item-lg">
+                                    <img src="/images/dropdown-icons/9.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Аксессуары и&nbsp;их&nbsp;комплектующие&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/10.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link header__catalog-dropdown-link-sale">Распродажа&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__catalog-dropdown-categories">
+                            <a href="" class="header__catalog-dropdown-categories-link">Один</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Два</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Три</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Четыре</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Пять</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__search">
+                    <input class="header__search-line" type="text" placeholder="Введите слова для поиска">
+                    <button class="header__search-btn"><img src="/images/lens.svg" alt="Поиск"
+							class="header__search-btn-img"></button>
+                </div>
+                <div class="header__useful-links">
+                    <div class="header__useful-links-item">
+                        <a href="#" class="header__useful-links-link"><img src="/images/profile.svg" alt="Профиль" class="profile-icon">
+                            <p>Профиль</p>
+                        </a>
+                    </div>
+                    <div class="header__useful-links-item">
+                        <a href="#" class="header__useful-links-link"><img src="/images/likes.svg" alt="Избранное" class="profile-icon">
+                            <p>Избранное</p>
+                        </a>
+                    </div>
+                    <div class="header__useful-links-item">
+                        <a href="#" class="header__useful-links-link"><img src="/images/cart.svg" alt="Корзина" class="profile-icon">
+                            <p>Корзина</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__down">
+                <ul class="header__category-nav">
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Электронные
+							испарители</a></li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Pod-системы</a></li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Жидкости</a></li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Кальяны</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Табаки</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Уголь</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Снюс</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Бонги</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Аксессуары</a></li>
+                    <li class="header__category-nav-item">
+                        <a href="#" class="header__category-nav-item-link header__category-nav-item-link-sale"><img src="/images/fire.svg" alt="Распродажа" class="sale-icon">Распродажа</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container-desktop">
+        <div class="btn" data-modal="auth">Авторизоваться</div>
+    </div>
+
+    <!-- START HTML Всплывашки -->
+    <div class="modal" id="auth">
+        <div class="modal__square">
+            <button class="modal__close btn btn--reset btn--cross" data-close-modal></button>
+            <div class="modal__square-content">
+                <div class="tabs">
+                    <ul class="tabs__list list-reset">
+                        <li class="tabs__item tabs__item-active" data-active-tab="modal-auth">
+                            <button class="btn--reset tabs__item-link">Авторизация</button>
+                        </li>
+
+                        <li class="tabs__item" data-active-tab="modal-registration">
+                            <button class="btn--reset tabs__item-link">Регистрация</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="tabs__wrap">
+                    <div class="tabs__content tabs__content-active" data-tab="modal-auth">
+                        <form action="/" method="/" class="form">
+                            <div class="input">
+                                <input type="text" class="input__elem" placeholder="E-mail">
+                            </div>
+
+                            <div class="input">
+                                <input type="password" class="input__elem" placeholder="Пароль">
+                            </div>
+
+                            <div class="form__send">
+                                <button class="btn btn--accent" type="submit" aria-label="Form send">Войти</button>
+                            </div>
+
+                            <a href="#" class="btn--reset form__link">Восстановить пароль</a>
+                        </form>
+                    </div>
+
+                    <div class="tabs__content" data-tab="modal-registration">
+                        <form action="/" method="/" class="form">
+                            <div class="input">
+                                <input type="text" class="input__elem" placeholder="Имя и фамилия">
+                            </div>
+
+                            <div class="input">
+                                <input type="text" class="input__elem" placeholder="E-mail">
+                            </div>
+
+                            <p class="form__desc">Придумайте пароль не менее 8 букв и цифр.</p>
+
+                            <div class="input">
+                                <input type="password" class="input__elem" placeholder="Пароль">
+                            </div>
+
+                            <div class="form__send">
+                                <button class="btn btn--accent" type="submit" aria-label="Form send">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END HTML Всплывашки -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/slider.js "></script>
+    <script src="/js/dropdownonclick.js "></script>
+
+    <script src="/js/modal.js"></script>
+</body>
+
+</html>

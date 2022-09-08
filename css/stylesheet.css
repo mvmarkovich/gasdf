@@ -1,0 +1,347 @@
+/* START RESET */
+img {
+    max-width: 100%;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.list-reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/* END RESET */
+
+/* START FORM */
+.input {
+    margin: 0 0 16px;
+}
+
+.input__elem {
+    font-family: 'Montserrat';
+    color: #2B3F6C;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 12px;
+    border: none;
+    min-height: 54px;
+    border-bottom: 1px solid #C3CDDA;
+}
+/* END FORM */
+
+/* START BTN */
+.btn {
+    color: #2B3F6C;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: unset;
+    position: relative;
+    text-decoration: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 16px;
+    min-height: 48px;
+    transition: .2s;
+    outline: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.btn--reset {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    min-height: 1px;
+    background: transparent;
+    cursor: pointer; 
+}
+
+.btn--accent {
+    color: #2B3F6C;
+    background: #FFE400;
+    border: 1px solid #FFE400;
+    border-radius: 4px;
+}
+
+.btn--accent:hover {
+    background: #fff;
+}
+
+.btn--favorites:before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+}
+
+.btn--cross:after {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+}
+
+.btn--favorites:before {
+    background-image: url("../images/favorites.svg");
+}
+
+.btn--cross:after {
+    background-image: url("../images/cross.svg");
+}
+
+.carousel-btn {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 4px 60px rgba(20, 56, 134, 0.16);
+    transition: .2s ease-in-out;
+    z-index: 99;
+}
+
+.carousel-btn-prev {
+    background-image: url("../images/carousel-prev.svg");
+    left: -24px;
+}
+
+.carousel-btn-next {
+    background-image: url("../images/carousel-next.svg");
+    right: -24px;
+}
+
+.carousel-btn:hover {
+    background-color: #fff;
+}
+/* END BTN */
+
+/* START PRODUCTS */
+.products {
+    position: relative;
+    margin: 60px 0;
+}
+
+.products__wrap-carousel {
+    padding: 0 0 64px;
+}
+  
+.products .swiper-container {
+    overflow: hidden;
+}
+
+.products__item-inner {
+    position: relative;
+}
+
+.products__item-img--wrap {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    border: 1px solid #D7E1ED;
+    margin: 0 0 16px;
+}
+
+.products__item-img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.products__item-title {
+    color: #2B3F6C;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0 4px;
+    min-height: 40px;
+}
+
+.products__item-mark {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    min-height: 20px;
+    padding: 0 6px;
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.products__item-mark--hot {
+    background: #FE0A60;
+}
+
+.products__item-mark--new {
+    background: #5080FA;
+}
+
+.products .price {
+    margin: 4px 0 12px;
+}
+
+.products .btn--accent {
+    padding: 0 16px;
+    width: 100%;
+}
+
+.products .btn--favorites {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price__col {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.price__old {
+    color: #FE0A60;
+    font-weight: 400;
+    margin: 0 8px 0 0;
+    text-decoration-line: line-through;
+}
+
+.price__current {
+    color: #2B3F6C;
+    font-weight: 600;
+}
+
+
+
+/* END PRODUCTS */
+
+
+/* START MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(38, 50, 56, .65);
+    justify-content: center;
+    z-index: 99990;
+    display: none;
+    overflow: auto;
+    opacity: 0;
+    transition: .3s ease;
+    padding: 16px;
+}
+
+.modal--open {
+    display: flex;
+}
+
+.modal--fadeIn {
+    opacity: 1;
+}
+
+.modal--fadeIn .modal__item,.modal--fadeIn .modal__square {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+}
+
+.modal--fadeIn .modal__square-img {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+    transition-delay: 0s;
+}
+
+.modal__item,.modal__square {
+    -webkit-transform: translateY(-10px) scale(.98);
+    transform: translateY(-10px) scale(.98);
+    transition: .3s ease;
+}
+
+.modal__close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.modal__square {
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: auto;
+    display: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal__square .modal__close {
+    opacity: .6;
+    z-index: 3;
+}
+
+.modal__square .modal__close:hover {
+    opacity: .8;
+}
+
+.modal__square-content {
+    background: #fff;
+    width: 420px;
+    padding: 24px 32px;
+    position: relative;
+    z-index: 2;
+}
+
+/* END MODAL */
+
+/* START TABS */
+.tabs__content {
+    display: none;
+}
+
+.tabs__content-active {
+    display: block;
+}
+
+/* END TABS */
+
+/* START УДАЛИТЬ В SCSS */
+.slider-section {
+    width: auto;
+}
+/* END УДАЛИТЬ В SCSS */

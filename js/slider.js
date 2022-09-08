@@ -27,14 +27,19 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-const sliders = new Swiper('.mySwiper', {
+const sliders = new Swiper('.products__carousel', {
     loop: true,
     slidesPerView: 2,
-    spaceBetween: 10,
+    spaceBetween: 24,
     navigation: {
-        nextEl: '.btn-next',
-        prevEl: '.btn-prev'
+        prevEl: '.products .carousel-btn-prev',
+        nextEl: '.products .carousel-btn-next'
     },
+
+    pagination: {
+        el: ".swiper-pagination",
+    },
+
     breakpoints: {
         568: {
             slidesPerView: 3
