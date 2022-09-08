@@ -1,0 +1,45 @@
+@media (min-width: 1140px) {
+  .header__desktop {
+    display: block;
+  }
+  .header__mobile {
+    display: none;
+  }
+  .container {
+    padding: 0;
+    width: 1140px;
+    margin: 0 auto;
+  }
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+  }
+  .header-logo {
+    width: 194.3px;
+    height: 32px;
+  }
+  .header__links-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 740px;
+  }
+  .header__links-item {
+    display: inline;
+    margin-right: 24px;
+  }
+  .header__links-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .header__phonenumber-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}/*# sourceMappingURL=desktop.css.map */

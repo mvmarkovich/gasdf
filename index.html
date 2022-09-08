@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20Gramm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- mobile header -->
+    <header class="header__mobile">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <img src="/images/logo.svg" alt="logo" class="logo-img">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <button class="menu__button menu__button-search"><span><img src="/images/lens.svg" alt=""
+								class="menu__search-img"></span></button>
+                    <button class="menu__button menu__button-nav"><span><img src="/images/navicon.svg" alt=""
+								class="menu__nav-icon"></span></button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- desktop header -->
+    <header class="header__desktop">
+        <div class="container-desktop">
+            <div class="header__top">
+                <div class="logo">
+                    <a href="#" class="logo-link"><img src="/images/logo.svg" alt="" class="header-logo"></a>
+                </div>
+                <div class="header__links">
+                    <ul class="header__links-list">
+                        <li class="header__links-item"><a href="#" class="header__links-link">Статьи и новости</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Магазины</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Оплата и доставка</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Скидки и акции</a></li>
+                        <li class="header__links-item"><a href="#" class="header__links-link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__phonenumber">
+                    <a href="tel" class="header__phonenumber-link">8(499)110-21-75</a>
+                </div>
+            </div>
+            <div class="header__middle">
+                <div class="header__catalog">
+                    <button onclick="dropdownToggle()" class="header__catalog-btn">
+						<p>Каталог</p><span><img src="/images/navicon.svg" alt="Каталог" class="menu_nav"></span>
+					</button>
+                    <div id="header__catalog-dropdown" class="header__catalog-dropdown-container">
+                        <div class="header__catalog-dropdown-sections">
+                            <ul class="header__catalog-dropdown-list">
+                                <li class="header__catalog-dropdown-item header__catalog-dropdown-item-lg">
+                                    <img src="/images/dropdown-icons/1.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link ">Одноразовые электронные испарители&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/2.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Pod-системы&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/3.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Жидкости&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/4.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Кальяны&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/5.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Табаки&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/6.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Уголь&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/7.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Снюс&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item header__catalog-dropdown-item-lg">
+                                    <img src="/images/dropdown-icons/8.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Бонги и&nbsp;аксессуары<br>к&nbsp;ним&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item header__catalog-dropdown-item-lg">
+                                    <img src="/images/dropdown-icons/9.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link">Аксессуары и&nbsp;их&nbsp;комплектующие&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                                <li class="header__catalog-dropdown-item">
+                                    <img src="/images/dropdown-icons/10.svg" alt="" class="header__catalog-dropdown-item-img">
+                                    <a href="#" class="header__catalog-dropdown-link header__catalog-dropdown-link-sale">Распродажа&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__catalog-dropdown-categories">
+                            <a href="" class="header__catalog-dropdown-categories-link">Один</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Два</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Три</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Четыре</a>
+                            <a href="" class="header__catalog-dropdown-categories-link">Пять</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__search">
+                    <input class="header__search-line" type="text" placeholder="Введите слова для поиска">
+                    <button class="header__search-btn"><img src="/images/lens.svg" alt="Поиск"
+							class="header__search-btn-img"></button>
+                </div>
+                <div class="header__useful-links">
+                    <div class="header__useful-links-item">
+                        <a href="#" class="header__useful-links-link"><img src="/images/profile.svg" alt="Профиль" class="profile-icon">
+                            <p>Профиль</p>
+                        </a>
+                    </div>
+                    <div class="header__useful-links-item">
+                        <a href="#" class="header__useful-links-link"><img src="/images/likes.svg" alt="Избранное" class="profile-icon">
+                            <p>Избранное</p>
+                        </a>
+                    </div>
+                    <div class="header__useful-links-item">
+                        <a href="#" class="header__useful-links-link"><img src="/images/cart.svg" alt="Корзина" class="profile-icon">
+                            <p>Корзина</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__down">
+                <ul class="header__category-nav">
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Электронные
+							испарители</a></li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Pod-системы</a></li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Жидкости</a></li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Кальяны</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Табаки</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Уголь</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Снюс</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Бонги</a>
+                    </li>
+                    <li class="header__category-nav-item"><a href="#" class="header__category-nav-item-link">Аксессуары</a></li>
+                    <li class="header__category-nav-item">
+                        <a href="#" class="header__category-nav-item-link header__category-nav-item-link-sale"><img src="/images/fire.svg" alt="Распродажа" class="sale-icon">Распродажа</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container-desktop">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img class="slider-image" src="/images/stocks/slider-desktop.png">
+                <div class="slider-inside-block">
+                    <h1 class="slider-header-text">Полное собрание вкусов в&nbsp;одном месте</h1>
+                    <p class="slider-item-text">Табаки для кальяна от ххх руб.</p>
+                    <button class="slider-item-btn">Перейти в каталог</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="slider-image" src="/images/stocks/slider1.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img class="slider-image" src="/images/stocks/slider-desktop.png">
+            </div>
+
+            <div class="slider-arrows">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="mobile-slider-additions">
+                <h1 class="mobile-slider-additions-h1">Полное собрание кальянов<wbr>&nbsp;в&nbsp;одном месте</h1>
+                <button class="mobile-slider-additions-btn">Перейти в каталог</button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="catalog__cards">
+                <div class="catalog__cards-col">
+                    <div class="catalog__cards-bigcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/1.png" alt="табаки для кальянов" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-bigcd">
+                                <h2 class="catalog__cards-text-h2">Табаки<br/>для кальянов</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/2.png" alt="Снюс" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Снюс</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="catalog__cards-col">
+                    <div class="catalog__cards-bigcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/3.png" alt="Pod-системы" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-bigcd">
+                                <h2 class="catalog__cards-text-h2">Pod-системы</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/4.png" alt="Бонги" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Бонги</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="catalog__cards-col">
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/5.png" alt="Жидкости" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Жидкости</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/6.png" alt="Электронные испарители" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Электронные<br/>испарители</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/7.png" alt="Аксессуары" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Аксессуары</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="catalog__cards-col">
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/8.png" alt="Кальяны" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Кальяны</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/9.png" alt="Уголь" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Уголь</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="catalog__cards-smcd">
+                        <a href="#" class="catalog__cards-click">
+                            <img src="/images/item-cards/10.png" alt="Распродажа" class="catalog__cards-bg">
+                            <div class="catalog__cards-text-block-smcd">
+                                <h2 class="catalog__cards-text-h2">Распродажа</h2>
+                                <p class="catalog__cards-text-p">333 товар</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog__mobile">
+                <ul class="catalog__mobile-list">
+                    <li class="catalog__mobile-item catalog__mobile-item-lg">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/1.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link ">Одноразовые электронные испарители&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/2.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Pod-системы&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/3.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Жидкости&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/4.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Кальяны&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/5.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Табаки&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/6.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Уголь&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/7.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Снюс&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item catalog__mobile-item-lg">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/8.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Бонги и&nbsp;аксессуары к&nbsp;ним&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item catalog__mobile-item-lg">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/9.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link">Аксессуары и&nbsp;их&nbsp;комплектующие&nbsp;<span class="catalog__mobile-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="catalog__mobile-item">
+                        <button class="catalog__mobile-btn">
+                            <div class="catalog__mobile-btn-text">
+                                <img src="/images/dropdown-icons/10.svg" alt="" class="catalog__mobile-item-img">
+                                <p class="catalog__mobile-link header__catalog-dropdown-link-sale">Распродажа&nbsp;<span class="header__catalog-dropdown-item-amount">123</span></a>
+                            </div>
+                            <img src="/images/plus.svg" alt="plus" class="catalog__mobile-plus-icon">
+                        </button>
+                        <ul class="catalog__mobile-list-dropdown">
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                            <li class="catalog__mobile-list-dropdown-item">
+                                <a href="#" class="catalog__mobile-list-dropdown-link">123</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="slider-section">
+                <div class="slider-section__top">
+                    <h2 class="slider__h2">Распродажа</h2>
+                    <a href="#" class="slider__show_all">Показать все</a>
+                </div>
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/item_slider/img.png " alt="asd " class="slider__item_image ">
+                            <p>звездочки</p>
+                            <p class="slider__item_name ">Overdose watermelon</p>
+                            <p class="slider__item_price ">215 P</p>
+                            <button class="slider__item_btn ">В корзину</button>
+                        </div>
+                    </div>
+                    <button class="btn-prev">&#10094;</button>
+                    <button class="btn-next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="/js/slider.js "></script>
+        <script src="/js/dropdownonclick.js "></script>
+</body>
+
+</html>
